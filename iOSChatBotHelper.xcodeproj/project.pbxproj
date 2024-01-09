@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		66C0BF202B4D84C000F8F751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BF1F2B4D84C000F8F751 /* AppDelegate.swift */; };
 		66C0BF222B4D84C000F8F751 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BF212B4D84C000F8F751 /* SceneDelegate.swift */; };
-		66C0BF242B4D84C000F8F751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BF232B4D84C000F8F751 /* ViewController.swift */; };
+		66C0BF242B4D84C000F8F751 /* ChatGPTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BF232B4D84C000F8F751 /* ChatGPTViewController.swift */; };
 		66C0BF272B4D84C000F8F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C0BF252B4D84C000F8F751 /* Main.storyboard */; };
 		66C0BF292B4D84C200F8F751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C0BF282B4D84C200F8F751 /* Assets.xcassets */; };
 		66C0BF2C2B4D84C200F8F751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C0BF2A2B4D84C200F8F751 /* LaunchScreen.storyboard */; };
+		66C0BF352B4D860100F8F751 /* ChatGPTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BF342B4D860100F8F751 /* ChatGPTResponse.swift */; };
+		66C0BF382B4D869100F8F751 /* ChatGPTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BF372B4D869100F8F751 /* ChatGPTView.swift */; };
+		66C0BF3F2B4DA65500F8F751 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66C0BF3E2B4DA65500F8F751 /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		66C0BF1C2B4D84C000F8F751 /* iOSChatBotHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSChatBotHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C0BF1F2B4D84C000F8F751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C0BF212B4D84C000F8F751 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66C0BF232B4D84C000F8F751 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66C0BF232B4D84C000F8F751 /* ChatGPTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewController.swift; sourceTree = "<group>"; };
 		66C0BF262B4D84C000F8F751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66C0BF282B4D84C200F8F751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66C0BF2B2B4D84C200F8F751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66C0BF2D2B4D84C200F8F751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66C0BF342B4D860100F8F751 /* ChatGPTResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTResponse.swift; sourceTree = "<group>"; };
+		66C0BF372B4D869100F8F751 /* ChatGPTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C0BF3F2B4DA65500F8F751 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +64,39 @@
 			children = (
 				66C0BF1F2B4D84C000F8F751 /* AppDelegate.swift */,
 				66C0BF212B4D84C000F8F751 /* SceneDelegate.swift */,
-				66C0BF232B4D84C000F8F751 /* ViewController.swift */,
+				66C0BF362B4D860600F8F751 /* Models */,
+				66C0BF392B4D87C700F8F751 /* Views */,
+				66C0BF332B4D85B400F8F751 /* Controllers */,
 				66C0BF252B4D84C000F8F751 /* Main.storyboard */,
 				66C0BF282B4D84C200F8F751 /* Assets.xcassets */,
 				66C0BF2A2B4D84C200F8F751 /* LaunchScreen.storyboard */,
 				66C0BF2D2B4D84C200F8F751 /* Info.plist */,
 			);
 			path = iOSChatBotHelper;
+			sourceTree = "<group>";
+		};
+		66C0BF332B4D85B400F8F751 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				66C0BF232B4D84C000F8F751 /* ChatGPTViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		66C0BF362B4D860600F8F751 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66C0BF342B4D860100F8F751 /* ChatGPTResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		66C0BF392B4D87C700F8F751 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				66C0BF372B4D869100F8F751 /* ChatGPTView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +115,9 @@
 			dependencies = (
 			);
 			name = iOSChatBotHelper;
+			packageProductDependencies = (
+				66C0BF3E2B4DA65500F8F751 /* OpenAISwift */,
+			);
 			productName = iOSChatBotHelper;
 			productReference = 66C0BF1C2B4D84C000F8F751 /* iOSChatBotHelper.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 66C0BF132B4D84C000F8F751;
+			packageReferences = (
+				66C0BF3D2B4DA65500F8F751 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 66C0BF1D2B4D84C000F8F751 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66C0BF242B4D84C000F8F751 /* ViewController.swift in Sources */,
+				66C0BF382B4D869100F8F751 /* ChatGPTView.swift in Sources */,
+				66C0BF242B4D84C000F8F751 /* ChatGPTViewController.swift in Sources */,
 				66C0BF202B4D84C000F8F751 /* AppDelegate.swift in Sources */,
+				66C0BF352B4D860100F8F751 /* ChatGPTResponse.swift in Sources */,
 				66C0BF222B4D84C000F8F751 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +403,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66C0BF3D2B4DA65500F8F751 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66C0BF3E2B4DA65500F8F751 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66C0BF3D2B4DA65500F8F751 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66C0BF142B4D84C000F8F751 /* Project object */;
 }
