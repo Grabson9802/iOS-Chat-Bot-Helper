@@ -53,7 +53,7 @@ class ChatGPTViewController: UIViewController, ChatGPTViewDelegate {
     }
     
     func userDidEnterInput(_ input: String) {
-        client = OpenAISwift(config: .makeDefaultOpenAI(apiKey: "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"))
+        client = OpenAISwift(config: .makeDefaultOpenAI(apiKey: "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"))
         
         client?.sendCompletion(with: input, maxTokens: 500, completionHandler: { result in
             switch result {
